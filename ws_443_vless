@@ -1,0 +1,47 @@
+{
+   "log":{
+      "loglevel":"warning"
+   },
+   "inbounds":[
+      {
+         "port":443,
+         "protocol":"vless",
+         "settings":{
+            "clients":[
+               {
+                  "id":"30aff4cd-a34c-43e0-a4b7-60674bbd829a",
+                  "level":0,
+                  "email":"standard"
+               }
+            ],
+            "decryption":"none"
+         },
+         "streamSettings":{
+            "network":"ws",
+            "security":"tls",
+            "tlsSettings":{
+               "serverName":"",
+               "alpn":[
+                  "h2",
+                  "http/1.1"
+               ],
+               "certificates":[
+                  {
+                     "certificateFile":"/etc/ssl/v2ray/cert.pub",
+                     "keyFile":"/etc/ssl/v2ray/priv.key"
+                  }
+               ]
+            },
+            "wsSettings": {
+                    "acceptProxyProtocol": false,
+                    "path": "/"
+                }
+         }
+      }
+   ],
+   "outbounds":[
+      {
+         "protocol":"freedom"
+      }
+   ]
+}
