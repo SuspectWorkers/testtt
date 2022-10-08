@@ -2,7 +2,7 @@ import socket, threading, thread, select, signal, sys, time, getopt
 
 # Listen
 LISTENING_ADDR = '127.0.0.1'
-LISTENING_PORT = 2502
+LISTENING_PORT = 33193
 #Pass
 PASS = ''
 
